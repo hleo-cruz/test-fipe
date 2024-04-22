@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: Audsat-Fipe
+
+
+http:
+  client:
+    vehicles:
+      base-url: http://fipe.parallelum.com.br/api/v2/cars
+      get-brands: /brands
+      get-models-by-brand: > 
+                            /brands/{brandId}/models
+      get-vehicle-fipe: >
+                        /brands/{brandId}/models/{modelId}/years/{yearId}
+      get-years-by-model: >
+                        /brands/{brandId}/models/{modelId}/years
+springdoc:
+  api-docs:
+    enabled: true
+  packages-to-scan: com.audsat.fipe.controller
